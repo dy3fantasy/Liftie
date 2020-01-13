@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/altbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:src="@drawable/bunny" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginBottom="2sp"
+        android:text="Hello Kayla,"
+        android:fontFamily="casual"
+        android:textSize="64sp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greeting"
+        android:layout_marginBottom="2sp"
+        android:fontFamily="casual"
+        android:text="what did you do today?"
+        android:textSize="36sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_marginLeft="20sp">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question"
+            android:layout_marginBottom="2sp"
+            android:fontFamily="casual"
+            android:text="Squat"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioButton1"
+            android:text="Bench"
+            android:fontFamily="casual"
+            android:layout_marginBottom="2sp"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioButton2"
+            android:text="Deadlift"
+            android:fontFamily="casual"
+            android:layout_marginBottom="2sp"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioButton3"
+            android:text="Accessory"
+            android:fontFamily="casual"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/squatMenu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:visibility="invisible"
+        android:layout_marginLeft="20sp">
+
+        <RadioButton
+            android:id="@+id/squatButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question"
+            android:layout_marginBottom="2sp"
+            android:fontFamily="casual"
+            android:text="Front Squat"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/squatButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/squatButton1"
+            android:text="Back Squat"
+            android:fontFamily="casual"
+            android:layout_marginBottom="2sp"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/squatMenu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:visibility="invisible"
+        android:layout_marginLeft="20sp">
+
+        <RadioButton
+            android:id="@+id/squatButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question"
+            android:layout_marginBottom="2sp"
+            android:fontFamily="casual"
+            android:text="High-Bar"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/squatButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/squatButton3"
+            android:text="Low Bar"
+            android:fontFamily="casual"
+            android:layout_marginBottom="2sp"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/deadliftMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:visibility="invisible"
+        android:layout_marginLeft="20sp">
+
+        <RadioButton
+            android:id="@+id/deadliftButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question"
+            android:layout_marginBottom="2sp"
+            android:fontFamily="casual"
+            android:text="Sumo"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/deadliftButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deadliftButton1"
+            android:text="Conventional"
+            android:fontFamily="casual"
+            android:layout_marginBottom="2sp"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editText"
+        android:visibility="invisible"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_marginLeft="20sp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="textPersonName"
+        android:hint="Put Accessory Name Here"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/backarrow"
+        android:visibility="invisible"
+        android:layout_width="57dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginLeft="20sp"
+        android:fontFamily="casual"
+        android:text="&lt;-"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/sets"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_marginBottom="2sp"
+        android:layout_marginTop="10sp"
+        android:text="Sets: "
+        android:fontFamily="casual"
+        android:layout_marginLeft="20sp"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/reps"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editSets"
+        android:layout_marginBottom="2sp"
+        android:layout_marginTop="10sp"
+        android:text="Reps: "
+        android:fontFamily="casual"
+        android:layout_marginLeft="20sp"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editReps"
+        android:layout_marginBottom="2sp"
+        android:layout_marginTop="10sp"
+        android:text="Weight: "
+        android:fontFamily="casual"
+        android:layout_marginLeft="20sp"
+        android:textSize="30sp" />
+
+
+
+    <EditText
+        android:id="@+id/editSets"
+        android:visibility="invisible"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_toRightOf="@+id/sets"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="num sets"
+        android:inputType="textPersonName"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editReps"
+        android:visibility="invisible"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editSets"
+        android:layout_toRightOf="@+id/reps"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="num reps"
+        android:inputType="textPersonName"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:visibility="invisible"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editReps"
+        android:layout_toRightOf="@+id/weight"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="lbs"
+        android:inputType="textPersonName"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/blank"
+        android:visibility="invisible"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_toRightOf="@+id/backarrow"
+        android:text="" />
+
+    <Button
+        android:id="@+id/save"
+        android:visibility="invisible"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@+id/blank"
+        android:background="@color/colorPrimary"
+        android:text="SAVE" />
+
+    <Button
+        android:id="@+id/next"
+        android:visibility="invisible"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@+id/save"
+        android:background="@color/colorPrimary"
+        android:text="NEXT" />
+
+    <Button
+        android:id="@+id/add"
+        android:visibility="invisible"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/sets"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/colorPrimary"
+        android:text="ADD LIFT" />
+
+    <TextView
+        android:id="@+id/blank2"
+        android:visibility="invisible"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sets"
+        android:layout_toRightOf="@+id/add"
+        android:text="" />
+
+    <Button
+        android:id="@+id/export"
+        android:visibility="invisible"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/sets"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@+id/blank2"
+        android:background="@color/colorPrimary"
+        android:text="EXPORT" />
+
+
+
+</RelativeLayout>
