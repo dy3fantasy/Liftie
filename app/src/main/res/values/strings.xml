@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Liftie</string>
+    <string name="question1">what did you do today?</string>
+    <string name="question2">anything else?</string>
+    <string name="greeting">Hello Kayla,</string>
+    <string name="confirmation">Got it Kayla,</string>
+    <string name="squat">Squat</string>
+    <string name="bench">Bench</string>
+    <string name="deadlift">Deadlift</string>
+    <string name="accessory">Accessory</string>
+    <string name="front_squat">Front Squat</string>
+    <string name="back_squat">Back Squat</string>
+    <string name="high_bar">High-Bar</string>
+    <string name="low_bar">Low Bar</string>
+    <string name="sumo">Sumo</string>
+    <string name="conventional">Conventional</string>
+    <string name="put_accessory_name_here">Put Accessory Name Here</string>
+    <string name="arrow"><![CDATA[<-]]></string>
+    <string name="sets">Sets:</string>
+    <string name="reps">Reps:</string>
+    <string name="weight">Weight:</string>
+    <string name="num_sets">num sets</string>
+    <string name="num_reps">num reps</string>
+    <string name="lbs">lbs</string>
+    <string name="save">SAVE</string>
+    <string name="next">NEXT</string>
+    <string name="export">EXPORT</string>
+    <string name="add_lift">ADD LIFT</string>
+</resources>
