@@ -24,7 +24,6 @@ class Storage {
     private String filepath = "";
     private String myData = "";
     File myExternalFile;
-    Uri path;
 
     public void setExternalFile(Context ma, String fileName, String filePath){ myExternalFile = new File(ma.getExternalFilesDir(filePath), fileName);}
     public File getExternalFile(){ return myExternalFile; }
