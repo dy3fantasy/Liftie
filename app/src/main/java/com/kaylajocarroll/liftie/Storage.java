@@ -24,8 +24,11 @@ class Storage {
     private String filepath = "";
     private String myData = "";
     File myExternalFile;
+    Uri path;
 
     public void setExternalFile(Context ma, String fileName, String filePath){ myExternalFile = new File(ma.getExternalFilesDir(filePath), fileName);}
+    public File getExternalFile(){ return myExternalFile; }
+    public File getExternalFile(Context ma){ return new File(ma.getExternalFilesDir("Liftie"), "LiftieLog.txt");}
     public String getData(){ return myData; }
     public void setData(String str){ myData = str; }
 
@@ -33,12 +36,13 @@ class Storage {
      * Exports external file
      */
     public void export(Context appContext, Context ma)throws Exception{
-        Uri path = FileProvider.getUriForFile(appContext, "com.kaylajocarroll.liftie.fileprovider", myExternalFile);
+        //Uri pathE = FileProvider.getUriForFile(appContext, "com.kaylajocarroll.liftie.fileprovider", myExternalFile);
+        Uri pathE = FileProvider.getUriForFile(appContext, "com.kaylajocarroll.liftie.fileprovider", getExternalFile(ma));
         Intent fileIntent = new Intent(Intent.ACTION_SEND);
         fileIntent.setType("text/csv");
         fileIntent.putExtra(Intent.EXTRA_SUBJECT, "Lifts");
         fileIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        fileIntent.putExtra(Intent.EXTRA_STREAM, path);
+        fileIntent.putExtra(Intent.EXTRA_STREAM, pathE);
         ma.startActivity(Intent.createChooser(fileIntent,"Export"));
     }
 

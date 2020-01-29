@@ -12,7 +12,12 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EntryActivity"></activity>
+        <activity android:name=".AccessoryActivity"></activity>
+        <activity android:name=".DeadliftActivity" />
+        <activity android:name=".BackSquatActivity" />
+        <activity android:name=".SquatActivity" />
+        <activity android:name=".FormActivity" />
+        <activity android:name=".FinishedActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

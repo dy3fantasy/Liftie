@@ -5,7 +5,7 @@
     android:background="@color/altbackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".SquatActivity"
     android:id="@+id/whole">
 
     <RelativeLayout
@@ -51,7 +51,7 @@
         app:layout_constraintLeft_toLeftOf="parent">
 
         <RadioGroup
-            android:id="@+id/mainMenu"
+            android:id="@+id/squatMenu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -60,43 +60,23 @@
             app:layout_constraintLeft_toLeftOf="parent">
 
             <RadioButton
-                android:id="@+id/squat"
+                android:id="@+id/front"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2sp"
                 android:fontFamily="casual"
-                android:text="@string/squat"
+                android:text="@string/front_squat"
                 android:onClick="menuClick"
                 android:textSize="30sp" />
 
             <RadioButton
-                android:id="@+id/bench"
+                android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/bench"
-                android:onClick="menuClick"
-                android:fontFamily="casual"
                 android:layout_marginBottom="2sp"
-                android:textSize="30sp" />
-
-            <RadioButton
-                android:id="@+id/deadlift"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/deadlift"
-                android:onClick="menuClick"
+                android:text="@string/back_squat"
                 android:fontFamily="casual"
-                android:layout_marginBottom="2sp"
-                android:textSize="30sp" />
-
-            <RadioButton
-                android:id="@+id/accessory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/accessory"
                 android:onClick="menuClick"
-                android:fontFamily="casual"
-                android:layout_marginBottom="2sp"
                 android:textSize="30sp" />
         </RadioGroup>
 
@@ -112,12 +92,12 @@
 
         <TextView
             android:id="@+id/backarrow"
-            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="240dp"
             android:fontFamily="casual"
             android:text="@string/arrow"
+            android:onClick="backClick"
             android:textColor="@color/colorAccent"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="@+id/bottomBot"
@@ -126,7 +106,6 @@
 
         <Button
             android:id="@+id/next"
-            android:visibility="invisible"
             android:layout_width="78dp"
             android:layout_height="37dp"
             android:background="@color/colorPrimary"

@@ -1,10 +1,12 @@
 package com.kaylajocarroll.liftie;
 
 import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.io.IOException;
 
-class Lift extends Storage{
+class Lift extends Storage implements Parcelable{
     private String date = java.time.LocalDate.now().toString();
     private String name,sets,reps,weight;
 
@@ -91,5 +93,36 @@ class Lift extends Storage{
         }
 
         setData(data);
+    }
+
+    /** METHODS THAT OVERRIDE PARCEL METHODS*/
+    @Override
+    public int describeContents(){
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel out, int flags){
+        out.writeStringArray(new String[] {name, sets, reps, weight, this.getData(), this.getExternalFile().toString()});
+    }
+
+    public static final Parcelable.Creator<Lift> CREATOR = new Parcelable.Creator<Lift>(){
+        public Lift createFromParcel(Parcel in){
+            return new Lift(in);
+        }
+
+        public Lift[] newArray(int size){
+            return new Lift[size];
+        }
+    };
+
+    private Lift(Parcel in){
+        String[] arr = new String[6];
+        in.readStringArray(arr);
+        name = arr[0];
+        sets = arr[1];
+        reps = arr[2];
+        weight = arr[3];
+        this.setData(arr[4]);
     }
 }
