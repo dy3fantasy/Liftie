@@ -48,7 +48,7 @@ class Lift extends Storage implements Parcelable{
     public boolean save(Context ma) {
 
         try {
-            setExternalFile(ma, "LiftieLog.txt", "Liftie");
+            setExternalFile(ma, "LiftieLog.csv", "Liftie");
             readFile();
             updateData();
             writeFile(ma);

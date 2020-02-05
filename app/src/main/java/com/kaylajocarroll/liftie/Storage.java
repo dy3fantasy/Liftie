@@ -27,7 +27,7 @@ class Storage {
 
     public void setExternalFile(Context ma, String fileName, String filePath){ myExternalFile = new File(ma.getExternalFilesDir(filePath), fileName);}
     public File getExternalFile(){ return myExternalFile; }
-    public File getExternalFile(Context ma){ return new File(ma.getExternalFilesDir("Liftie"), "LiftieLog.txt");}
+    public File getExternalFile(Context ma){ return new File(ma.getExternalFilesDir("Liftie"), "LiftieLog.csv");}
     public String getData(){ return myData; }
     public void setData(String str){ myData = str; }
 

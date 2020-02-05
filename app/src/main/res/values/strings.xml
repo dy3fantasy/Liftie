@@ -26,4 +26,7 @@
     <string name="next">NEXT</string>
     <string name="export">EXPORT</string>
     <string name="add_lift">ADD LIFT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
